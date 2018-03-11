@@ -55,40 +55,60 @@
     > div {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
 
-      > div {
+      > div, > a {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: flex-start;
         margin-right: 20px;
+
+        > svg {
+          height: 15px;
+          width: 15px;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &:last-child {
+          min-width: 100px;
+          width: 50%;
+        }
       }
     }
 
-    span {
+
+    span, a {
       margin-bottom: 4px;
     }
 
     a {
       display: inline-block;
       align-items: center;
-      font-size: 1.1em;
       text-decoration: none;
       color: #333;
+      white-space: nowrap;
 
       &:hover {
-        color: #0072B7;
+        color: #01629E;
       }
 
       svg {
-        vertical-align: text-top;
-        margin-right: 5px;
         height: 18px;
         width: 18px;
+        vertical-align: text-top;
+        margin-right: 5px;
       }
     }
 
     @media screen and (max-width: 768px){
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
   }
 

@@ -1,8 +1,10 @@
 .about-us {
+  max-width: 100%;
+
   &__image {
     max-width: 100%;
+    width: 20em;
     max-height: 100%;
-    max-width: 20em;
     margin-bottom: 10px;
   }
 
@@ -43,7 +45,7 @@
       border: 1px solid #E8E8E8;
       padding: 5px;
       border-radius: 5px;
-      margin: 0 5px 5px 0;
+      margin: 0 10px 10px 0;
       flex-grow: 1;
       flex-shrink: 1;
     }
@@ -51,7 +53,7 @@
 
   &__certificates {
     font-size: 1.2em;
-    color: #0072B7;
+    color: #01629E;
     font-weight: bold;
   }
 }

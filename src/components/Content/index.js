@@ -7,6 +7,7 @@ import AboutUs from '../AboutUs';
 import Offer from '../Offer';
 import Contact from '../Contact';
 
+import logo from '../../images/logo.png';
 import background from '../../images/background_mid.jpg';
 
 import './Content.css';
@@ -14,6 +15,17 @@ import './Content.css';
 class Content extends Component {
   render() {
     const { location } = this.props;
+    const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
+    const overlay = pathname === 'oferta' || pathname === 'kontakt';
+    let linkBack = '';
+
+    if (pathname === 'oferta') {
+      linkBack = location.pathname.substring(0, location.pathname.lastIndexOf("/oferta") + 1);
+    }
+
+    if (pathname === 'kontakt') {
+      linkBack = location.pathname.substring(0, location.pathname.lastIndexOf("/kontakt") + 1);
+    }
 
     return (
       <div className="content">
@@ -31,16 +43,22 @@ class Content extends Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}
         >
-          {location.pathname !== '/' && (
+          {overlay && (
             <Link
-              to="/"
+              to={linkBack}
               className="content__close"
             >
-              <FaClose />
+              <img
+                src={logo}
+                alt="Kontecho"
+              />
+              <div>
+                <FaClose />
+              </div>
             </Link>
           )}
-          {location.pathname === '/oferta' && <Offer />}
-          {location.pathname === '/kontakt' && <Contact />}
+          {pathname === 'oferta' && <Offer />}
+          {pathname === 'kontakt' && <Contact />}
         </ReactCSSTransitionGroup>
       </div>
     );
