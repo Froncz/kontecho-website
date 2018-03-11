@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  margin: 15px -30px 0;
+  border-top: 1px solid #E8E8E8;
+
+  &-item {
+    flex-grow: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #0072B7;
+    transition: all 200ms ease-in;
+
+    &:hover {
+      background: #F7F7F7;
+    }
+
+    &:first-child {
+      border-right: 1px solid #E8E8E8;
+    }
+  }
+}

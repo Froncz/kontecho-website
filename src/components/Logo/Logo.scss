@@ -1,0 +1,42 @@
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+
+  &__image {
+    transform: translate(0px, 100px) rotate(45deg);
+    height: 120px;
+    width: auto;
+  }
+
+  &__layer-1 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 500px;
+    transform: translateY(-100%);
+    background: white;
+    z-index: 3;
+  }
+
+  &__layer-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 500px;
+    transform: translateX(-100%);
+    background: white;
+    z-index: 3;
+  }
+}
