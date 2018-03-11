@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-
+import { Link } from 'react-router-dom'
 
 import './Nav.css';
 
@@ -7,12 +7,12 @@ class Nav extends PureComponent {
   render() {
     return (
       <div className="nav">
-        <div className="nav-item">
+        <Link to="oferta" className="nav-item">
           Oferta
-        </div>
-        <div className="nav-item">
+        </Link>
+        <Link to="kontakt" className="nav-item">
           Kontakt
-        </div>
+        </Link>
       </div>
     );
   }

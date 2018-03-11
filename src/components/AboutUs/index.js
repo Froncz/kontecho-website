@@ -24,12 +24,14 @@ const AboutUs = () => (
     <div className="about-us__text">
       <h3>Ochroną informacji i zabezpieczeniami zajmuję się od ponad 10 lat.</h3>
       <div className="about-us__functions">
-        <div>Dotychczasowe doświadczenie zdobyłem w obszarze administracji rządowej i biznesie pełniąc funkcje:</div>
-        {functions.map((title, key) => (
-          <span key={key}>
-            {title}
-          </span>
-        ))}
+        <strong>Dotychczasowe doświadczenie zdobyłem w obszarze administracji rządowej i biznesie pełniąc funkcje:</strong>
+        <div>
+          {functions.map((title, key) => (
+            <span key={key}>
+              {title}
+            </span>
+          ))}
+        </div>
       </div>
       <div className="about-us__certificates">
         Posiadam niezbędne szkolenia i certyfikaty.

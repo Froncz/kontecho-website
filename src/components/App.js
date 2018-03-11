@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import Content from './Content';
 import Logo from './Logo';
 import Nav from './Nav';
-import AboutUs from './AboutUs';
-import Offer from './Offer';
-import Contact from './Contact';
 
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+const App = (props) => {
+  return (
+    <Router>
       <div className="App">
         <Logo />
-        <Content>
-          <AboutUs />
-          <Offer />
-          <Contact />
-        </Content>
+        <Content />
+        <Nav />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
