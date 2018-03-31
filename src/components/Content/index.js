@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FaClose from 'react-icons/lib/fa/close';
@@ -12,7 +12,7 @@ import background from '../../images/background_mid.jpg';
 
 import './Content.css';
 
-class Content extends Component {
+class Content extends PureComponent {
   render() {
     const { location } = this.props;
     const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);

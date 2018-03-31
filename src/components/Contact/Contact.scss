@@ -1,6 +1,7 @@
 .contact {
   color: #333;
   align-items: flex-start;
+  line-height: 1.1;
 
   h3 {
     font-size: 1.5em;
@@ -76,6 +77,12 @@
         > div {
           display: flex;
           flex-direction: column;
+        }
+
+        &:first-child {
+          > svg {
+            margin-top: 2px;
+          }
         }
 
         &:last-child {
