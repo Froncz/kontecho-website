@@ -5,6 +5,11 @@ import FaAngleUp from 'react-icons/lib/fa/angle-up';
 import './Nav.css';
 
 class Nav extends PureComponent {
+  onClick() {
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
+  }
   render() {
     const { location } = this.props;
     const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
@@ -24,6 +29,7 @@ class Nav extends PureComponent {
         <Link
           to={linkOffer}
           className={`nav-item ${pathname === 'oferta' ? 'active' : ''}`}
+          onClick={this.onClick}
         >
           Oferta
           <FaAngleUp />
@@ -31,6 +37,7 @@ class Nav extends PureComponent {
         <Link
           to={linkContact}
           className={`nav-item ${pathname === 'kontakt' ? 'active' : ''}`}
+          onClick={this.onClick}
         >
           Kontakt
           <FaAngleUp />

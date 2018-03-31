@@ -6,13 +6,13 @@ import './Logo.css';
 
 const Logo = () => (
   <React.Fragment>
-    <div className="logo">
+    <h1 className="logo">
       <img
         className="logo__image"
         src={logo}
         alt="Kontecho"
       />
-    </div>
+    </h1>
     <div className="logo__layer-1" />
     <div className="logo__layer-2" />
   </React.Fragment>

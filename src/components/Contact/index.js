@@ -11,36 +11,35 @@ const Contact = () => (
   <div className="content__overlay contact">
     <h3>Kontakt</h3>
     <div className="contact__form">
-      Formularz będzie tutaj
-    </div>
-    <div className="contact__company-info">
-      <div className="contact__company">
-        <img
-          className="contact__image"
-          src={logo_text}
-          alt="Kontecho - Ochrona Danych"
-        />
-      </div>
-      <div className="contact__info">
-        <strong>Tomasz Puta</strong>
-        <div>
-          <a href="https://goo.gl/maps/DcxqKyzDs8s">
-            <FaMap />
-            <div>
-              <span>ul. Żytnia 26/64</span>
-              <span>08-110 Siedlce</span>
-            </div>
-          </a>
+      <div className="contact__company-info">
+        <div className="contact__company">
+          <img
+            className="contact__image"
+            src={logo_text}
+            alt="Kontecho - Ochrona Danych"
+          />
+        </div>
+        <div className="contact__info">
+          <strong>Tomasz Puta</strong>
           <div>
+            <a href="https://goo.gl/maps/DcxqKyzDs8s">
+              <FaMap />
+              <div>
+                <span>ul. Żytnia 26/64</span>
+                <span>08-110 Siedlce</span>
+              </div>
+            </a>
             <div>
-              <a href="tel:+48604105315">
-                <FaPhoneSquare />
-                tel. 604105315
-              </a>
-              <a href="mailto:biuro@kontecho.pl">
-                <FaEnvelopeSquare />
-                biuro@kontecho.pl
-              </a>
+              <div>
+                <a href="tel:+48604105315">
+                  <FaPhoneSquare />
+                  tel. 604105315
+                </a>
+                <a href="mailto:biuro@kontecho.pl">
+                  <FaEnvelopeSquare />
+                  biuro@kontecho.pl
+                </a>
+              </div>
             </div>
           </div>
         </div>
