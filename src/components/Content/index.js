@@ -14,6 +14,20 @@ import background from '../../images/background_mid.jpg';
 import './Content.css';
 
 class Content extends PureComponent {
+  componentWillUpdate(newProps) {
+    const { location } = this.props;
+    const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
+    const newPathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
+
+    if (pathname !== newPathname) {
+      const overlay = pathname === 'oferta' || pathname === 'kontakt';
+      const newOverlay = newPathname === 'oferta' || newPathname === 'kontakt';
+
+      if (overlay !== newOverlay) {
+        document.body.overflow = newOverlay ? 'hidden' : 'auto' ;
+      }
+    }
+  }
   render() {
     const { location } = this.props;
     const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
@@ -36,14 +50,20 @@ class Content extends PureComponent {
           src={background}
           alt="Ochrona danych"
         />
-        <Scrollbars
-          className="content__content"
-          style={{ position: 'absolute' }}
-          renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
-          renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
-        >
-          <AboutUs />
-        </Scrollbars>
+        {window.innerWidth > 768 ? (
+          <Scrollbars
+            className="content__content"
+            style={{ position: 'absolute' }}
+            renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
+            renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
+          >
+            <AboutUs />
+          </Scrollbars>
+        ) : (
+          <div className="content__content">
+            <AboutUs />
+          </div>
+        )}
         <ReactCSSTransitionGroup
           transitionName="element"
           transitionEnterTimeout={500}
