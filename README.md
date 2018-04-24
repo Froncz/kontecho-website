@@ -1,20 +1,3 @@
-@smykBlue: #0072B7;
-@smykDarkBlue: #01629E;
-@smykLightBlue: #F3F8FC;
-@smykDarkGrey: #494949;
-@smykDarkGrey2: #6E6E6E;
-@smykDarkGrey3: #B0AEAE;
-@smykLightGrey: #E8E8E8;
-@smykLightGrey2: #F7F7F7;
-@smykLightGrey3: #F0F0F0;
-@smykYellow: #FFCC33;
-@smykRed: #D0021B;
-@smykDarkRed: #af2738;
-@smykGreen: #009C37;
-@smykPlaceholder: #DBD8D8;
-@footerIcon: #303030;
-@dark: #333;
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
