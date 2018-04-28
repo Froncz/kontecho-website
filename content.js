@@ -3,7 +3,7 @@ window.content = {
     "podtytul": "Ochroną informacji i zabezpieczeniami zajmuję się od ponad 10 lat.",
     "doswiadczenie": "Dotychczasowe doświadczenie zdobyłem w obszarze administracji rządowej i biznesie pełniąc funkcje:",
     funkcje: [
-      "Oficera Bezpieczeństwa",
+      "Oficera Bezpieczeństwa test",
       "Pełnomocnika do spraw ochrony informacji niejawnych",
       "Administratora bezpieczeństwa informacji",
       "Inspektora bezpieczeństwa teleinformatycznego",
