@@ -42,7 +42,7 @@ const Contact = ({ content: { kontakt }}) => (
                     <FaPhoneSquare />
                     tel. {kontakt.numer}
                   </a>
-                  <a href="mailto:biuro@kontecho.pl">
+                  <a href={`mailto:${kontakt.email}`}>
                     <FaEnvelopeSquare />
                     {kontakt.email}
                   </a>
