@@ -8,7 +8,7 @@ import logo_text from '../../images/logo_text_black.png';
 
 import './Contact.css';
 
-const Contact = () => (
+const Contact = ({ content: { kontakt }}) => (
   <Scrollbars
     renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
     renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
@@ -16,7 +16,7 @@ const Contact = () => (
     style={{ position: window.innerWidth <= 768 ? 'fixed' : 'absolute' }}
   >
     <div className="inner">
-      <h3>Kontakt</h3>
+      <h3>{kontakt.tytul}</h3>
       <div className="contact__form">
         <div className="contact__company-info">
           <div className="contact__company">
@@ -27,24 +27,24 @@ const Contact = () => (
             />
           </div>
           <div className="contact__info">
-            <strong>Tomasz Puta</strong>
+            <strong>{kontakt.nazwa}</strong>
             <div>
               <a href="https://goo.gl/maps/DcxqKyzDs8s">
                 <FaMap />
                 <div>
-                  <span>ul. Żytnia 26/64</span>
-                  <span>08-110 Siedlce</span>
+                  <span>{kontakt.adres1}</span>
+                  <span>{kontakt.adres2}</span>
                 </div>
               </a>
               <div>
                 <div>
-                  <a href="tel:+48604105315">
+                  <a href={`tel:+48${kontakt.numer}`}>
                     <FaPhoneSquare />
-                    tel. 604105315
+                    tel. {kontakt.numer}
                   </a>
                   <a href="mailto:biuro@kontecho.pl">
                     <FaEnvelopeSquare />
-                    biuro@kontecho.pl
+                    {kontakt.email}
                   </a>
                 </div>
               </div>

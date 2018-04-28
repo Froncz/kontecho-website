@@ -7,16 +7,17 @@ import Nav from './Nav';
 
 import './App.css';
 
-const App = (props) => {
-  return (
-    <Router>
-      <div className="App">
-        <Logo />
-        <Route path="*" component={Content} />
-        <Nav />
-      </div>
-    </Router>
-  );
-}
+const App = (props) => (
+  <Router>
+    <div className="App">
+      <Logo />
+      <Route
+        path="*"
+        component={Content}
+      />
+      <Nav />
+    </div>
+  </Router>
+);
 
 export default App;

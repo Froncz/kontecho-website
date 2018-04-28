@@ -4,15 +4,7 @@ import logo_text from '../../images/logo_text_black.png';
 
 import "./AboutUs.css";
 
-const functions = [
-  "Oficera Bezpieczeństwa",
-  "Pełnomocnika do spraw ochrony informacji niejawnych",
-  "Administratora bezpieczeństwa informacji",
-  "Inspektora bezpieczeństwa teleinformatycznego",
-  "Inspektora bezpieczeństwa fizycznego"
-];
-
-const AboutUs = () => (
+const AboutUs = ({ content: { o_nas } }) => (
   <div className="about-us">
     <h2>
       <img
@@ -22,11 +14,15 @@ const AboutUs = () => (
       />
     </h2>
     <div className="about-us__text">
-      <h3>Ochroną informacji i zabezpieczeniami zajmuję się od ponad 10 lat.</h3>
+      <h3>
+        {o_nas.podtytul}
+      </h3>
       <div className="about-us__functions">
-        <strong>Dotychczasowe doświadczenie zdobyłem w obszarze administracji rządowej i biznesie pełniąc funkcje:</strong>
+        <strong>
+          {o_nas.doswiadczenie}
+        </strong>
         <div>
-          {functions.map((title, key) => (
+          {o_nas.funkcje && o_nas.funkcje.map((title, key) => (
             <span key={key}>
               {title}
             </span>
@@ -34,7 +30,7 @@ const AboutUs = () => (
         </div>
       </div>
       <div className="about-us__certificates">
-        Posiadam niezbędne szkolenia i certyfikaty.
+        {o_nas.certyfikaty}
       </div>
     </div>
   </div>
