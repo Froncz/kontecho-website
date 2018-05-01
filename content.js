@@ -1,6 +1,6 @@
 window.content = {
   "o_nas": {
-    "podtytul": "Ochroną informacji i zabezpieczeniami zajmuję się od ponad 10 lat!",
+    "podtytul": "Ochroną informacji i zabezpieczeniami zajmuję się od ponad 10 lat.",
     "doswiadczenie": "Dotychczasowe doświadczenie zdobyłem w obszarze administracji rządowej i biznesie pełniąc funkcje:",
     funkcje: [
       "Oficera Bezpieczeństwa",
